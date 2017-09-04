@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html ng-app="QueerCon" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Queer Continuum Conference -- QueerCon</title>
+    <meta name="description" content="Queer Continuum Conference -- QueerCon.">
+    <meta name="author" content="Joni Weiss">
+
+    <!--FontAwesome CDN:
+        ____________________________________________________________________-->
+    <!-- <script src="//use.fontawesome.com/b62f931377.js"></script> -->
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+
+    <!--Social Media meta
+        ____________________________________________________________________-->
+    <meta property="fb:app_id" content="1102230213194868" />
+    <meta property="og:url" content="http://queercon.1to5clubutah.org" />
+    <meta property="og:title" content="Queer Continuum Conference" />
+    <meta property="og:description" content="Queer Continuum Conference Website" />
+    <meta property="og:image" content="http://queercon.1to5clubutah.org/img/queercon2017.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+
+
+    <!--Favicons:
+        ____________________________________________________________________-->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons.ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons.ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons.ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons.ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons.ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons.ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons.ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons.ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons.ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicons.ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons.ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicons.ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons.ico/favicon-16x16.png">
+    <link rel="manifest" href="img/favicons.ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicons.ico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--Zurb Foundation Resources:
+        ____________________________________________________________________-->
+    <link rel="stylesheet" href="css/foundation.min.css" />
+    <script src="js/modernizr.js"></script>
+
+    <!--Additional Font Resources:
+        ____________________________________________________________________-->
+    <link href='//fonts.googleapis.com/css?family=Ubuntu:400,500,700|Merriweather+Sans:400,700,800' rel='stylesheet' type='text/css'>
+
+    <!--Local Customization:
+        ____________________________________________________________________-->
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+</head>
+
+<body role="document" ng-controller="MainCtrl" id="bodyAnchor">
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '1102230213194868',
+                xfbml: true,
+                version: 'v2.7'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div id="scrollToTop"></div>
+
+    <div id="wrapper">
+        <div>
+            <back-to-top></back-to-top>
+        </div>
+        <!-- ***********************
+                 Header (Begin)
+            **************************** -->
+        <header class="site-content">
+            <div id="header-img">
+                <a href="#/">
+                    <img class="img-responsive" src="img/queercon-banner.png" alt="Queer Continuum Conference - header image of logo">
+                </a>
+            </div>
+            <!-- ***********************
+                     Navigation (Begin)
+                **************************** -->
+            <div class="contain-to-grid sticky">
+                <nav class="top-bar" data-topbar>
+                    <ul class="title-area">
+
+                        <li class="name text-center">
+                            <h1>
+                                <a id="site-name" href="#bodyAnchor">
+                                        QueerCon2017
+                                    </a>
+                            </h1>
+                        </li>
+                        <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+                    </ul>
+                    <section class="top-bar-section">
+
+                        <ul class="right">
+                            <li class="divider"></li>
+                            <li><a ui-sref="home">
+                                <span class="fa fa-lg" aria-hidden="true">&#xf015;
+                                </span> Home</a></li>
+                            <li class="divider"></li>
+                            <li><a ui-sref="registerLink">
+                                Registration <span class="fa 
+                                        aria-hidden="true">&#xf08e;
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a ui-sref="workshops">Workshops</a></li>
+                            <li class="divider"></li>
+                            <li><a ui-sref="schedule">
+                                <span class="fa fa-lg" aria-hidden="true">&#xf017;
+                                </span> Schedule</a></li>
+                            <li class="divider"></li>
+                            <li><a ui-sref="keynote">Keynote</a></li>
+                            <li class="divider"></li>
+                            <!--<li><a ui-sref="sponsors">Sponsors</a></li>-->
+                            <!--<li class="divider"></li>-->
+                            <li><a ui-sref="map">
+                                <span class="fa fa-lg" aria-hidden="true">&#xf278;
+                                </span> Map</a></li>
+                            <li class="divider"></li>
+                            <li><a ui-sref="aboutUs">About QueerCon</a></li>
+                            <li class="divider"></li>
+                        </ul>
+                    </section>
+                </nav>
+            </div>
+            <!-- ***********************
+                     Navigation (End)
+                **************************** -->
+            <section class="qc-subheader">
+
+                <div class="row-wrapper row">
+                    <p>Utah’s 1 to 5 Club is proud to present the third annual Queer Continuum conference.<br /> This year’s
+                        theme is All of Us or None of Us.
+                    </p>
+                </div>
+                <div id="btn-register" class="row-wrapper row">
+                    <span>
+                        <a class="button button-rounded-hover" href="https://utahpridecenter.secure.force.com/events/CnP_PaaS_EVT__ExternalRegistrationPage?event_id=a2G0a000000pgD5EAI" target="_blank">
+                            Register Today! <span class="fa 
+                            aria-hidden="true">&#xf08e;
+                        </span>
+                    </a>
+                    </span>
+                </div>
+                <div class='row-wrapper row'>
+                    <div class="medium-6 columns">
+                        <p><span>QueerCon begins in:</span>
+                            <span countdown='' date='September 23, 2017 09:00:00'></span></p>
+                    </div>
+                    <div class="medium-3 columns">
+                        <p>
+                            <a href="https://connect.clickandpledge.com/w/Form/2380d8b3-e10f-41c3-8d8b-6ab563e86fcc" target="_blank">
+                                <strong>
+                                    <span class="fa fa-lg" 
+                                        aria-hidden="true">&#xf09d;
+                                    </span>
+                                    Donate
+                                </strong>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="medium-3 columns">
+                        <p>
+                            <a href="assets/QueerCon2016.pdf" target="_blank">
+                                <strong>
+                                    <span class="fa fa-lg" aria-hidden="true">&#xf1c1;</span>
+                                        Brochure
+                                    </strong>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <!-- ***********************
+                 Header (End)
+            **************************** -->
+        <div id="scrollToHere"></div>
+        <section ui-view-container class="site-content">
+            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+            <div class="addthis_inline_follow_toolbox text-center"></div>
+            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+            <div class="addthis_inline_share_toolbox text-center"></div>
+            <div ui-view>
+                <!-- All Main Page Content will be placed here by the Angular UI.Router -->
+            </div>
+        </section>
+        <!-- ***********************
+                 Footer
+            **************************** -->
+        <footer class="site-content text-center">
+            <div class="row">
+                <span><em>
+                        <p>We are committed to maintaining a safe and inclusive space. Please use inclusive language.
+                        </p>
+                        <p>Also, please avoid wearing strong scents. Enjoy the conference!
+                        </p>
+                    </em></span>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="small-12 medium-6 large-4 columns">
+                    <p><strong>When</strong><br>
+                        <span class="fa fa-lg" aria-hidden="true">&#xf1ec;</span> Saturday, Sep 23, 2017<br> 9:00am - 4:00pm</p>
+                    <p class="open-close"></p>
+                </div>
+                <div class="small-12 medium-6 large-4 columns">
+                    <p><strong>Where:</strong><br>
+                        <a href="//www.google.com/maps/place/210+E+400+S,+Salt+Lake+City,+UT+84111/@40.760034,-111.8864477,17z/data=!3m1!4b1!4m5!3m4!1s0x8752f513816e33cf:0xf6655a3dbf116ac9!8m2!3d40.76003!4d-111.884259"
+                            target="_blank">
+                            <span class="fa fa-lg" aria-hidden="true">&#xf041;</span>
+                                    SLC Public Library (Downtown)<br>
+                                    210 E 400 S<br>
+                                    Salt Lake City, UT 84111
+                                </a>
+                    </p>
+                </div>
+                <div class="small-12 medium-6 large-4 columns">
+                    <p><strong>Contact:</strong><br>
+                        <a href="//facebook.com/pages/1-to-5-Club/195455310485661"> 
+                            <span class="fa fa-lg" aria-hidden="true">&#xf230;</span> The 1to5Club Facebook Page</a><br>
+
+                        <a href="mailto:1to5club@utahpridecenter.org?subject=Hello%20From%20A%20Web%20Site%20Visitor">
+                            <span class="fa fa-lg">&#xf0e0;</span> 1to5club@utahpridecenter.org
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="text-center">
+                    <h2 class="text-center jenna-text">Mission Statement</h2>
+                    <p>Queer Continuum is a safe space for exploring all aspects of sexuality and attraction. From bisexual
+                        to pansexual, aromantic to polyamorous, we embrace and deconstruct how race, class, gender, ability
+                        and other facets of our identities intersect and affect us. With a commitment to both diversity and
+                        inclusion, we challenge social norms and instigate meaningful conversations that strengthen our "queer"mmunity.</p>
+                </div>
+            </div>
+            <!--<hr>-->
+            <hr>
+            <div class="row">
+                <div id="copyright" class="column">
+                    <p>
+                        <span class="fa fa-lg" aria-hidden="true">&#xf1f9;</span>
+                        <copyright-string></copyright-string>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <p>This site hand-coded with
+                        <span class="fa fa-lg">&#xf004;</span> by <a href="//handmadepixels.com" target="_blank">Joni Weiss</a>.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!--Angular.JS Resources:
+        ____________________________________________________________________-->
+    <!--        <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="js/angular.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular-aria.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+        <script src="js/angular-smooth-scroll.js"></script>-->
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-aria.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <script src="js/angular-smooth-scroll.min.js"></script>
+
+    <script src="js/app.js"></script>
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57d2321c6c829de0"></script>
+
+
+    <!-- Script resources for Foundation: -->
+    <script src="js/foundation.min.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+</body>
+
+</html>

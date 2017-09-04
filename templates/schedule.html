@@ -1,0 +1,147 @@
+<div id="ScrollTop" ng-controller="workshopsCtrl">
+    <div class="site-content">
+        <h2 class="text-center jenna-text">Conference Schedule</h2>
+        <div class="row" data-equalizer>
+            <!--Begin Time Block 1 - Registration-->
+            <div class="small-block-grid=1 large-block-grid=2">
+                <div class="table-row-hr">
+                    <div class="title">Registration</div>
+                    <div class="room">Room</div>
+                    <div class="note">09:00 AM - 09:30 AM</div>
+                </div>
+                <div class="table-row">
+                    <div class="title">Registration</div>
+                    <div class="room">Library - Lower level</div>
+                    <div class="note">Note: Wheelchair access via elevator near Auditorium.</div>
+                </div>
+            </div>
+            <!--End Time Block 1 - Registration-->
+
+            <!--Begin Time Block 2 - Welcome Address & Orientation-->
+            <div class="small-block-grid=1 large-block-grid=2">
+                <div class="table-row-hr">
+                    <div class="title">Welcome Address</div>
+                    <div class="room">Room</div>
+                    <div class="note">09:30 AM - 09:45 AM</div>
+                </div>
+                <div class="table-row">
+                    <div class="title">Welcome Address & Orientation</div>
+                    <div class="room">Auditorium</div>
+                    <div class="note">Note: Wheelchair access from main and lower levels. Use elevator near auditorium.</div>
+                </div>
+            </div>
+            <!--End Time Block 2 - Welcome Address & Orientation-->
+
+            <!--Begin Time Block 3 - Session 1-->
+            <div class="small-block-grid=1 large-block-grid=2">
+                <div class="table-row-hr">
+                    <div class="title">Session 1</div>
+                    <div class="room">Room</div>
+                    <div class="note">09:50 AM - 10:50 AM</div>
+                </div>
+                <div class="table-row" ng-repeat="item in workshops" ng-if='item.session == "1"'>
+                    <div class="title">{{item.title}}</div>
+                    <div class="room">{{item.room}}</div>
+                    <div class="summary" ng-if="item.summary != ''"><strong>Summary:</strong> {{item.summary}}</div>
+                    <div class="presenter"><strong>Presenter:</strong> {{item.presenter}}</div>
+                    <div class="note" ng-if="item.note != ''">{{item.note}}</div>
+                </div>
+            </div>
+            <!--End Time Block 3 - Session 1-->
+
+            <!--Begin Time Block 4 - Keynote-->
+            <div class="small-block-grid=1 large-block-grid=2">
+                <div class="table-row-hr">
+                    <div class="title">Keynote Address with Ella Mendoza</div>
+                    <div class="room">Room</div>
+                    <div class="note">11:00 AM - 12:00 PM</div>
+                </div>
+                <div class="table-row">
+                    <div class="title">Keynote Address</div>
+                    <div class="room">Auditorium</div>
+                    <div class="note">Note: Wheelchair access from main and lower levels. Use elevator near auditorium.</div>
+                </div>
+            </div>
+            <!--End Time Block 4 - Keynote-->
+
+            <!--Begin Time Block 5 - Lunch-->
+            <div class="small-block-grid=1 large-block-grid=2">
+                <div class="table-row-hr">
+                    <div class="title">Lunch</div>
+                    <div class="room">Room</div>
+                    <div class="note">12:00 PM - 01:00 PM</div>
+                </div>
+                <div class="table-row">
+                    <div class="title">Lunch</div>
+                    <div class="room">See note below:</div>
+                    <div class="note">Note: Lunch location options will be provided.</div>
+                </div>
+            </div>
+            <!--End Time Block 5 - Lunch-->
+
+            <!--Begin Time Block 6 - Session 2-->
+            <div class="small-block-grid=1 large-block-grid=2">
+                <div class="table-row-hr">
+                    <div class="title">Session 2</div>
+                    <div class="room">Room</div>
+                    <div class="note">01:00 PM - 02:00 PM</div>
+                </div>
+                <div class="table-row" ng-repeat="item in workshops" ng-if='item.session == "2"'>
+                    <div class="title">{{item.title}}</div>
+                    <div class="room">{{item.room}}</div>
+                    <div class="summary" ng-if="item.summary != ''">Summary: {{item.summary}}</div>
+                    <div class="presenter">Presenter: {{item.presenter}}</div>
+                    <div class="note" ng-if="item.note != ''">{{item.note}}</div>
+                </div>
+            </div>
+            <!--End Time Block 6 - Session 2-->
+
+            <!--Begin Time Block 7 - Break-->
+            <div class="small-block-grid=1 large-block-grid=2">
+                <div class="table-row-hr">
+                    <div class="title">Break</div>
+                    <div class="room">Room</div>
+                    <div class="note">02:00 PM - 02:15 PM</div>
+                </div>
+                <div class="table-row">
+                    <div class="title">Break</div>
+                    <div class="room">Library - Lower Level</div>
+                    <div class="note"></div>
+                </div>
+            </div>
+            <!--End Time Block 7 - Break-->
+
+            <!--Begin Time Block 8 - Session 3-->
+            <div class="small-block-grid=1 large-block-grid=2">
+                <div class="table-row-hr">
+                    <div class="title">Session 3</div>
+                    <div class="room">Room</div>
+                    <div class="note">02:15 PM - 03:15 PM</div>
+                </div>
+                <div class="table-row" ng-repeat="item in workshops" ng-if='item.session == "3"'>
+                    <div class="title">{{item.title}}</div>
+                    <div class="room">{{item.room}}</div>
+                    <div class="summary" ng-if="item.summary != ''">Summary: {{item.summary}}</div>
+                    <div class="presenter">Presenter: {{item.presenter}}</div>
+                    <div class="note" ng-if="item.note != ''">{{item.note}}</div>
+                </div>
+            </div>
+            <!--Begin Time Block 8 - Session 3-->
+
+            <!--Begin Time Block 9 - Farewell-->
+            <div class="small-block-grid=1 large-block-grid=2">
+                <div class="table-row-hr">
+                    <div class="title">Farewell Message</div>
+                    <div class="room">Room</div>
+                    <div class="note">03:30 PM - 04:00 PM</div>
+                </div>
+                <div class="table-row">
+                    <div class="title">Farewell Message</div>
+                    <div class="room">Library Amphitheater</div>
+                    <div class="note">Note: Amphitheater is located just outside the south doors.</div>
+                </div>
+            </div>
+            <!--End Time Block 9 - Farewell-->
+        </div>
+    </div>
+</div>

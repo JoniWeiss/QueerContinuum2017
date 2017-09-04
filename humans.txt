@@ -1,0 +1,8 @@
+/* The QueerCon Web App was made by Joni Weiss, dba Hand Made Pixels, web developer in Salt Lake City, UT */
+/* joniwebgirl.com */
+/* queercon.xyz */
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: AngulerJS, Angular-smooth-scroll,  Foundation
+  Software: WebStorm, Git, AddThis

@@ -1,0 +1,545 @@
+/****************************************************************************
+ * Business Name: Queer Continuum Conference
+ * Site Name: QueerCon
+ * Created:   August 2015-2016
+ * Author:    Joni Weiss, handmadepixels.com
+ ***************************************************************************/
+/************************************************
+ GENERAL
+ ************************************************/
+/*
+ * Web Fonts from fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2015 Fontspring
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      Darcy Baldwin Fonts
+ * License URL: http://www.fontspring.com/licenses/darcy-baldwin-fonts/webfont
+ *
+ */
+
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+Fonts {
+  Primary: "Merriweather Sans", sans-serif;
+}
+
+Colors {
+  GC-Blue: #1d1a8b;
+  GC-Magenta: #8b1a89;
+  GC-Purple: #551a8b;
+  Background: whitesmoke;
+}
+
+body {
+  /********************************************
+    Background pattern for all pages.
+*********************************************/
+  background: radial-gradient(
+        rgba(255, 255, 255, 0) 0,
+        rgba(255, 255, 255, 0.15) 30%,
+        rgba(255, 255, 255, 0.3) 32%,
+        rgba(255, 255, 255, 0) 33%
+      )
+      0 0,
+    radial-gradient(
+        rgba(255, 255, 255, 0) 0,
+        rgba(255, 255, 255, 0.1) 11%,
+        rgba(255, 255, 255, 0.3) 13%,
+        rgba(255, 255, 255, 0) 14%
+      )
+      0 0,
+    radial-gradient(
+        rgba(255, 255, 255, 0) 0,
+        rgba(255, 255, 255, 0.2) 17%,
+        rgba(255, 255, 255, 0.43) 19%,
+        rgba(255, 255, 255, 0) 20%
+      )
+      0 110px,
+    radial-gradient(
+        rgba(255, 255, 255, 0) 0,
+        rgba(255, 255, 255, 0.2) 11%,
+        rgba(255, 255, 255, 0.4) 13%,
+        rgba(255, 255, 255, 0) 14%
+      ) -130px -170px,
+    radial-gradient(
+        rgba(255, 255, 255, 0) 0,
+        rgba(255, 255, 255, 0.2) 11%,
+        rgba(255, 255, 255, 0.4) 13%,
+        rgba(255, 255, 255, 0) 14%
+      )
+      130px 370px,
+    radial-gradient(
+        rgba(255, 255, 255, 0) 0,
+        rgba(255, 255, 255, 0.1) 11%,
+        rgba(255, 255, 255, 0.2) 13%,
+        rgba(255, 255, 255, 0) 14%
+      )
+      0 0,
+    linear-gradient(
+      45deg,
+      #8b1a89 0%,
+      #551a8b 20%,
+      #551a8b 40%,
+      #551a8b 60%,
+      #551a8b 75%,
+      #1d1a8b 100%
+    );
+  background-size: 470px 470px, 970px 970px, 410px 410px, 610px 610px,
+    530px 530px, 730px 730px, 100% 100%;
+  background-color: whitesmoke;
+
+  padding: 1em;
+
+  margin: 0;
+}
+
+a {
+  color: #222;
+}
+
+p {
+  margin: 1em;
+}
+
+#wrapper {
+  background-color: #000;
+  border-radius: 5px;
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 0.5% 0.5%;
+}
+
+.site-content {
+  background-color: whitesmoke;
+  max-width: 100%;
+  margin: 0 auto;
+  /*padding: 0 1%;*/
+}
+
+#site-name {
+  font-size: 2.125rem;
+  font-weight: bold;
+  line-height: 2.8125rem;
+  font-family: "djb_jennaregular", Arial, sans-serif;
+}
+
+.jenna-text {
+  font-family: "djb_jennaregular", Arial, sans-serif;
+}
+
+footer {
+  margin-bottom: 5rem;
+  padding-bottom: 5rem;
+}
+
+/********************************************
+    Classes for images
+*********************************************/
+img {
+  max-width: 100%;
+}
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+.home-images {
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+  border: solid 0.2rem #551a8b;
+  box-shadow: 10px 5px 5px black;
+}
+
+.bio-image {
+  float: left;
+  margin: 0 1rem;
+  border-radius: 3px;
+  border: solid 0.2rem #551a8b;
+  box-shadow: 10px 5px 5px black;
+}
+
+.bio-text {
+  padding: 1rem 2rem;
+}
+
+/**********************************
+ CSS for Sub-header Section
+***********************************/
+
+.qc-subheader {
+  margin: 0;
+  width: 100%;
+  background: whitesmoke;
+  max-width: 100%;
+  /* border-top: solid #000 2px;
+  border-bottom: solid #000 2px; */
+  /* box-shadow: inset 0 0 1em #551a8b; */
+  text-align: center;
+}
+
+#btn-donate {
+  padding-bottom: 0.75rem;
+  padding-top: 1rem;
+}
+
+#btn-register {
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
+}
+
+.button-rounded-hover {
+  border: 0;
+  border-radius: 5000px;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  transition: all 0.35s ease;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.button-rounded-hover:before {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border-radius: inherit;
+  background-color: #fefefe;
+  transition: all 0.3s;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.button-rounded-hover:after {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border: 5px solid #115b8d;
+  content: "";
+  border-radius: inherit;
+}
+
+.button-rounded-hover:hover,
+.button-rounded-hover:focus {
+  background-color: #115b8d;
+}
+
+.button-rounded-hover:hover:before,
+.button-rounded-hover:focus:before {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  opacity: 0.25;
+}
+
+/**********************************
+NAVIGATION
+***********************************/
+
+li > a:hover {
+  box-shadow: inset 0 0 5px 3px #8b1a89;
+}
+
+.open-close {
+  background-color: #2aabd2;
+  font-weight: bold;
+  border-radius: 12px;
+}
+
+.social {
+  display: block;
+  margin: 0.5rem auto;
+  padding: 0 1rem;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  max-width: 22rem;
+}
+
+.social a.button {
+  border: solid 0.25rem #eee;
+  background: #eee;
+}
+
+.social a.button:hover,
+.social a.button:focus {
+  border: solid 0.25rem #3b5998;
+}
+
+.specials {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Have to set height explicitly on ui-view
+to prevent collapsing during animation*/
+.site-content[ui-view] {
+  height: 65px;
+}
+
+.ui-view-container {
+  position: relative;
+}
+
+.scrl,
+[ui-view].ng-enter,
+[ui-view].ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+}
+
+a.back-to-top {
+  display: none;
+  width: 60px;
+  height: 60px;
+  text-indent: -9999px;
+  position: fixed;
+  z-index: 999;
+  right: 1%;
+  bottom: 5%;
+  background: #8b1a89 url("../img/up-arrow.png") no-repeat center 43%;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+
+a:hover.back-to-top {
+  background-color: #551a8b;
+}
+
+/**********************************
+ Table Styles - Divs
+***********************************/
+.table-row,
+.table-row-hr {
+  position: relative;
+}
+
+div .table-row-hr {
+  background-color: #551a8b;
+  margin-top: 1.5em;
+  padding-top: 0.25em;
+  min-width: 95%;
+  border: solid 0.2rem #1d1a8b;
+}
+
+.table-row *,
+.table-row-hr * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+div .title {
+  min-width: 40%;
+  min-width: calc(100% - 12em);
+}
+
+div .title,
+div .room,
+div .meta-data {
+  padding: 0.5em 0.5em 0 0.5em;
+}
+
+div .note,
+div .summary,
+div .presenter {
+  padding: 0 0.5em 0.5em 0.5em;
+}
+
+.table-row .title {
+  display: block;
+  clear: left;
+}
+
+.table-row {
+  border-bottom: 1px solid #dbecf8;
+}
+
+.table-row-hr .meta-data {
+  display: inline-block;
+  position: relative;
+}
+
+div .note,
+.table-row .meta-data > * {
+  display: inline-block;
+}
+
+div .meta-data > * {
+  min-width: 4em;
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+
+.table-row-hr .title,
+.table-row-hr .session,
+.table-row-hr .room,
+.table-row-hr .note,
+.table-row-hr .summary,
+.table-row-hr .presenter,
+.table-row-hr .start,
+.table-row-hr .end {
+  color: #ddd;
+  font-size: 1em;
+  /*font-weight: bold;*/
+}
+
+.table-row .title,
+.table-row .session,
+.table-row .room {
+  color: #000;
+  font-size: 1em;
+  /*font-weight: bold;*/
+}
+
+.table-row .note,
+.table-row .summary,
+.table-row .presenter,
+.table-row .start,
+.table-row .end {
+  color: #222;
+  font-size: 0.8em;
+  font-weight: normal;
+}
+
+/**********************************
+ Media Queries
+***********************************/
+/*Medium screens*/
+@media only screen and (min-width: 40.063em) {
+  #wrapper {
+    max-width: 87%;
+  }
+
+  div.small-12.medium-6.large-2.columns {
+    padding-left: 0.02rem;
+    padding-right: 0.02rem;
+  }
+
+  a.back-to-top {
+    right: 7.1%;
+  }
+
+  div .title,
+  div .room,
+  div .meta-data {
+    padding: 1em 1em 1em 1.5em;
+  }
+
+  div .note,
+  div .summary,
+  div .presenter,
+  div .meta-data {
+    padding: 0 1em 1em 1.5em;
+  }
+
+  .table-row .title {
+    border-bottom: thin dotted #551a8b;
+  }
+
+  div .title {
+    min-width: 65%;
+    min-width: calc(100% - 22em);
+    font-size: 1em;
+    font-weight: normal;
+    padding: 0 1rem;
+  }
+
+  div .table-row-hr {
+    margin-top: 2em;
+    padding-top: 1em;
+    background-color: #551a8b;
+    min-width: 45%;
+    border-radius: 3px;
+    border: solid 0.2rem #1d1a8b;
+    color: #eee;
+  }
+
+  .table-row .title {
+    display: inline-block;
+    clear: left;
+  }
+
+  div .summary,
+  div .presenter,
+  div .note {
+    width: 100%;
+  }
+
+  div .meta-data {
+    width: 20em;
+  }
+
+  div .meta-data > * {
+    width: 8em;
+    display: inline-block;
+  }
+}
+
+/*Large screens*/
+@media only screen and (min-width: 64.063em) {
+  body {
+    padding: 1.75em;
+  }
+
+  #wrapper {
+    max-width: 90%;
+  }
+
+  div.small-12.medium-6.large-2.columns {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+
+  a.back-to-top {
+    right: 10%;
+  }
+}
+
+/*XLarge screens*/
+@media only screen and (min-width: 90.063em) {
+  a.back-to-top {
+    right: 12%;
+  }
+}
