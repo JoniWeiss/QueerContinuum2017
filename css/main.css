@@ -28,11 +28,6 @@
  *
  */
 
-@font-face {
-  font-weight: normal;
-  font-style: normal;
-}
-
 html {
   box-sizing: border-box;
 }
@@ -42,17 +37,8 @@ html {
 *::after {
   box-sizing: inherit;
   font-family: "Merriweather Sans", sans-serif;
-}
-
-Fonts {
-  Primary: "Merriweather Sans", sans-serif;
-}
-
-Colors {
-  GC-Blue: #1d1a8b;
-  GC-Magenta: #8b1a89;
-  GC-Purple: #551a8b;
-  Background: whitesmoke;
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
@@ -204,76 +190,31 @@ img {
   text-align: center;
 }
 
-#btn-donate {
-  padding-bottom: 0.75rem;
-  padding-top: 1rem;
+.button.alert {
+  border: solid 3px black;
+  border-radius: 10px;
 }
 
-#btn-register {
+.button.alert:hover {
+  box-shadow: inset 0 0 5px 3px #551a8b;
+}
+
+/* #btn-donate {
   padding-bottom: 0.7rem;
   padding-top: 0.7rem;
-}
+} */
 
-.button-rounded-hover {
-  border: 0;
-  border-radius: 5000px;
-  padding: 1rem 2rem;
-  text-transform: uppercase;
-  position: relative;
-  overflow: hidden;
-  font-size: 1rem;
-  letter-spacing: 2px;
-  transition: all 0.35s ease;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-}
-
-.button-rounded-hover:before {
-  opacity: 0;
-  content: "";
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  border-radius: inherit;
-  background-color: #fefefe;
-  transition: all 0.3s;
-  -webkit-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.button-rounded-hover:after {
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  border: 5px solid #115b8d;
-  content: "";
-  border-radius: inherit;
-}
-
-.button-rounded-hover:hover,
-.button-rounded-hover:focus {
-  background-color: #115b8d;
-}
-
-.button-rounded-hover:hover:before,
-.button-rounded-hover:focus:before {
-  -webkit-transform: translateX(0%);
-  -ms-transform: translateX(0%);
-  transform: translateX(0%);
-  opacity: 0.25;
-}
+/* #btn-register {
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
+} */
 
 /**********************************
 NAVIGATION
 ***********************************/
 
 li > a:hover {
-  box-shadow: inset 0 0 5px 3px #8b1a89;
+  box-shadow: inset 0 0 5px 3px #c0fefe;
 }
 
 .open-close {
