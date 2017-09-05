@@ -204,7 +204,7 @@ app.controller("MainCtrl", [
   "smoothScroll",
   function($scope, smoothScroll) {
     $scope.message = "Welcome to QueerCon!";
-    var element = document.getElementById("scrollHome");
+    var element = document.getElementById("bodyAnchor");
     var options = {
       duration: 700,
       easing: "easeInQuad"
