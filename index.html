@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Queer Continuum Conference -- QueerCon</title>
+    <title ng-bind="$state.current.data.pageTitle + ' - Queer Continuum Conference'">Queer Continuum Conference -- QueerCon</title>
+
     <meta name="description" content="Queer Continuum Conference -- QueerCon.">
-    <meta name="author" content="Joni Weiss">
+    <meta name="author" content="Web Application by Joni Weiss -- dba HandMade Pixels">
 
 
     <!--Social Media meta
@@ -68,6 +69,7 @@
 </head>
 
 <body role="document" ng-controller="MainCtrl" id="bodyAnchor">
+    <div id="scrollHome"></div>
     <script>
         window.fbAsyncInit = function () {
             FB.init({
@@ -84,54 +86,52 @@
             }
             js = d.createElement(s);
             js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js";
+            js.src = " //connect.facebook.net/en_US/sdk.js ";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-    <div id="scrollToTop"></div>
-
-    <div id="wrapper">
+    <main role="main " id="wrapper ">
         <div>
             <back-to-top></back-to-top>
         </div>
         <!-- ***********************
                  Header (Begin)
             **************************** -->
-        <header class="site-content">
-            <div id="header-img">
-                <a href="#/">
-                    <img class="img-responsive" src="img/queercon-banner.png" alt="Queer Continuum Conference - header image of logo">
+        <header class="site-content ">
+            <div id="header-img ">
+                <a href="#/ ">
+                    <img class="img-responsive " src="img/queercon-banner.png " alt="Queer Continuum Conference - header
+        image of logo ">
                 </a>
             </div>
             <!-- ***********************
                      Navigation (Begin)
                 **************************** -->
-            <div class="contain-to-grid sticky">
-                <nav class="top-bar" data-topbar>
-                    <ul class="title-area">
+            <div class="contain-to-grid sticky ">
+                <nav class="top-bar " data-topbar>
+                    <ul class="title-area ">
 
-                        <li class="name text-center">
+                        <li class="name text-center ">
                             <h1>
-                                <a id="site-name" href="#bodyAnchor">
+                                <a id="site-name " href="#bodyAnchor ">
                                         QueerCon2017
                                     </a>
                             </h1>
                         </li>
-                        <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+                        <li class="toggle-topbar menu-icon "><a href="# "><span>menu</span></a></li>
                     </ul>
-                    <section class="top-bar-section">
+                    <section class="top-bar-section ">
 
-                        <ul class="right">
-                            <li class="divider"></li>
-                            <li><a ui-sref="home">
-                                <span class="fa fa-lg" aria-hidden="true">&#xf015;
+                        <ul class="right ">
+                            <li class="divider "></li>
+                            <li><a ui-sref="home ">
+                                <span class="fa fa-lg " aria-hidden="true ">&#xf015;
                                 </span> Home</a></li>
-                            <li class="divider"></li>
-                            <li><a ui-sref="registerLink">
-                                Registration <span class="fa 
-                                        aria-hidden="true">&#xf08e;
-                                    </span>
-                                </a>
+                            <li class="divider "></li>
+                            <li><a ui-sref="registerLink ">
+                                Registration <span class="fa aria-hidden="true">&#xf08e;
+        </span>
+        </a>
                             </li>
                             <li class="divider"></li>
                             <li><a ui-sref="workshops">Workshops</a></li>
@@ -206,15 +206,14 @@
         <!-- ***********************
                  Header (End)
             **************************** -->
-        <div id="scrollToHere"></div>
-        <section ui-view-container class="site-content">
-            <!-- Go to www.addthis.com/dashboard to customize your tools -->
-            <div class="addthis_inline_follow_toolbox text-center"></div>
-            <!-- Go to www.addthis.com/dashboard to customize your tools -->
-            <div class="addthis_inline_share_toolbox text-center"></div>
+        <section id="scrollTop" ui-view-container class="site-content">
             <div ui-view>
                 <!-- All Main Page Content will be placed here by the Angular UI.Router -->
             </div>
+            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+            <!-- <div class="addthis_inline_follow_toolbox text-center"></div> -->
+            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+            <!-- <div class="addthis_inline_share_toolbox text-center"></div> -->
         </section>
         <!-- ***********************
                  Footer
@@ -284,16 +283,12 @@
                 </div>
             </div>
         </footer>
-    </div>
+    </main>
     <!--Angular.JS Resources:
         ____________________________________________________________________-->
-    <!--        <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-        <script src="js/angular.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular-aria.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
-        <script src="js/angular-smooth-scroll.js"></script>-->
     <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="js/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="js/angular-sanitize.min.js"></script>
     <script src="js/angular-aria.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
     <script src="js/angular-smooth-scroll.min.js"></script>

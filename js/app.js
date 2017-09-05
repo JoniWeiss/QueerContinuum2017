@@ -1,51 +1,56 @@
 /**
  * Created by joniweiss on 7/24/15.
  */
-var app = angular.module("QueerCon", ["ngAria", "ui.router", "smoothScroll"]);
+var app = angular.module("QueerCon", [
+  "ngAria",
+  "ui.router",
+  "smoothScroll",
+  "ngSanitize"
+]);
 
 app.config([
   "$stateProvider",
   "$urlRouterProvider",
   function($stateProvider, $urlRouterProvider) {
     // // For any unmatched url, send to /route1
-    $urlRouterProvider.otherwise("/#");
+    $urlRouterProvider.otherwise("/");
 
     $stateProvider
       .state("home", {
         url: "/",
         templateUrl: "templates/home.html",
         controller: "MainCtrl",
-        title: "Home"
+        data: { pageTitle: "Home" }
       })
       .state("workshops", {
         url: "/workshops",
         templateUrl: "templates/workshops.html",
         controller: "workshopsCtrl",
-        title: "Workshops"
+        data: { pageTitle: "Workshops" }
       })
       .state("schedule", {
         url: "/schedule",
         templateUrl: "templates/schedule.html",
         controller: "workshopsCtrl",
-        title: "Schedule"
+        data: { pageTitle: "Schedule" }
       })
       .state("keynote", {
         url: "/keynote",
         templateUrl: "templates/keynote.html",
         controller: "DefaultCtrl",
-        title: "Keynote"
+        data: { pageTitle: "Keynote" }
       })
       .state("map", {
         url: "/map",
         templateUrl: "templates/map.html",
         controller: "DefaultCtrl",
-        title: "Map"
+        data: { pageTitle: "Map" }
       })
       .state("aboutUs", {
         url: "/aboutUs",
         templateUrl: "templates/about.html",
         controller: "DefaultCtrl",
-        title: "About QueerCon"
+        data: { pageTitle: "About QueerCon" }
       })
       .state("registerLink", {
         url:
@@ -165,10 +170,10 @@ app.controller("DefaultCtrl", [
   "$scope",
   "smoothScroll",
   function($scope, smoothScroll) {
-    var element = document.getElementById("scrollToHere");
+    var element = document.getElementById("scrollTop");
     var options = {
       duration: 700,
-      offset: 35,
+      offset: 50,
       easing: "easeInQuad"
     };
     smoothScroll(element, options);
@@ -184,10 +189,10 @@ app.controller("workshopsCtrl", [
       $scope.workshops = data;
       $scope.oneAtATime = true;
     });
-    var element = document.getElementById("scrollToHere");
+    var element = document.getElementById("scrollTop");
     var options = {
       duration: 700,
-      offset: 35,
+      offset: 50,
       easing: "easeInQuad"
     };
     smoothScroll(element, options);
@@ -199,10 +204,9 @@ app.controller("MainCtrl", [
   "smoothScroll",
   function($scope, smoothScroll) {
     $scope.message = "Welcome to QueerCon!";
-    var element = document.getElementById("scrollToTop");
+    var element = document.getElementById("scrollHome");
     var options = {
       duration: 700,
-      offset: 35,
       easing: "easeInQuad"
     };
     smoothScroll(element, options);
