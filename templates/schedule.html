@@ -2,7 +2,7 @@
     <div class="site-content">
         <h2 class="text-center jenna-text">Conference Schedule</h2>
         <div class="row" data-equalizer>
-            <!--Begin Time Block 1 - Registration-->
+            <!--Begin Time Block - Registration-->
             <div class="small-block-grid=1 large-block-grid=2">
                 <div class="table-row-hr">
                     <div class="title">Registration</div>
@@ -15,9 +15,9 @@
                     <div class="note">Note: Wheelchair access via elevator near Auditorium.</div>
                 </div>
             </div>
-            <!--End Time Block 1 - Registration-->
+            <!--End Time Block - Registration-->
 
-            <!--Begin Time Block 2 - Welcome Address & Orientation-->
+            <!--Begin Time Block - Welcome Address & Orientation-->
             <div class="small-block-grid=1 large-block-grid=2">
                 <div class="table-row-hr">
                     <div class="title">Welcome Address</div>
@@ -26,18 +26,33 @@
                 </div>
                 <div class="table-row">
                     <div class="title">Welcome Address & Orientation</div>
-                    <div class="room">Auditorium</div>
-                    <div class="note">Note: Wheelchair access from main and lower levels. Use elevator near auditorium.</div>
+                    <div class="room">Conference Room A</div>
+                    <div class="note"> </div>
                 </div>
             </div>
-            <!--End Time Block 2 - Welcome Address & Orientation-->
+            <!--End Time Block - Welcome Address & Orientation-->
 
-            <!--Begin Time Block 3 - Session 1-->
+            <!--Begin Time Block - Keynote-->
+            <div class="small-block-grid=1 large-block-grid=2">
+                <div class="table-row-hr">
+                    <div class="title">Keynote Address with Ella Mendoza</div>
+                    <div class="room">Room</div>
+                    <div class="note">9:45 AM - 10:30 PM</div>
+                </div>
+                <div class="table-row">
+                    <div class="title">Keynote Address</div>
+                    <div class="room">Conference Room A</div>
+                    <div class="note"> </div>
+                </div>
+            </div>
+            <!--End Time Block - Keynote-->
+
+            <!--Begin Time Block - Session 1-->
             <div class="small-block-grid=1 large-block-grid=2">
                 <div class="table-row-hr">
                     <div class="title">Session 1</div>
                     <div class="room">Room</div>
-                    <div class="note">09:50 AM - 10:50 AM</div>
+                    <div class="note">09:45 AM - 10:45 AM</div>
                 </div>
                 <div class="table-row" ng-repeat="item in workshops" ng-if='item.session == "1"'>
                     <div class="title">{{item.title}}</div>
@@ -47,24 +62,9 @@
                     <div class="note" ng-if="item.note != ''">{{item.note}}</div>
                 </div>
             </div>
-            <!--End Time Block 3 - Session 1-->
+            <!--End Time Block - Session 1-->
 
-            <!--Begin Time Block 4 - Keynote-->
-            <div class="small-block-grid=1 large-block-grid=2">
-                <div class="table-row-hr">
-                    <div class="title">Keynote Address with Ella Mendoza</div>
-                    <div class="room">Room</div>
-                    <div class="note">11:00 AM - 12:00 PM</div>
-                </div>
-                <div class="table-row">
-                    <div class="title">Keynote Address</div>
-                    <div class="room">Auditorium</div>
-                    <div class="note">Note: Wheelchair access from main and lower levels. Use elevator near auditorium.</div>
-                </div>
-            </div>
-            <!--End Time Block 4 - Keynote-->
-
-            <!--Begin Time Block 5 - Lunch-->
+            <!--Begin Time Block - Lunch-->
             <div class="small-block-grid=1 large-block-grid=2">
                 <div class="table-row-hr">
                     <div class="title">Lunch</div>
@@ -77,14 +77,14 @@
                     <div class="note">Note: Lunch location options will be provided.</div>
                 </div>
             </div>
-            <!--End Time Block 5 - Lunch-->
+            <!--End Time Block - Lunch-->
 
-            <!--Begin Time Block 6 - Session 2-->
+            <!--Begin Time Block - Session 2-->
             <div class="small-block-grid=1 large-block-grid=2">
                 <div class="table-row-hr">
                     <div class="title">Session 2</div>
                     <div class="room">Room</div>
-                    <div class="note">01:00 PM - 02:00 PM</div>
+                    <div class="note">01:30 PM - 02:030PM</div>
                 </div>
                 <div class="table-row" ng-repeat="item in workshops" ng-if='item.session == "2"'>
                     <div class="title">{{item.title}}</div>
@@ -94,9 +94,9 @@
                     <div class="note" ng-if="item.note != ''">{{item.note}}</div>
                 </div>
             </div>
-            <!--End Time Block 6 - Session 2-->
+            <!--End Time Block - Session 2-->
 
-            <!--Begin Time Block 7 - Break-->
+            <!--Begin Time Block - Break-->
             <div class="small-block-grid=1 large-block-grid=2">
                 <div class="table-row-hr">
                     <div class="title">Break</div>
@@ -109,14 +109,14 @@
                     <div class="note"></div>
                 </div>
             </div>
-            <!--End Time Block 7 - Break-->
+            <!--End Time Block - Break-->
 
-            <!--Begin Time Block 8 - Session 3-->
+            <!--Begin Time Block - Session 3-->
             <div class="small-block-grid=1 large-block-grid=2">
                 <div class="table-row-hr">
                     <div class="title">Session 3</div>
                     <div class="room">Room</div>
-                    <div class="note">02:15 PM - 03:15 PM</div>
+                    <div class="note">02:45 PM - 03:45 PM</div>
                 </div>
                 <div class="table-row" ng-repeat="item in workshops" ng-if='item.session == "3"'>
                     <div class="title">{{item.title}}</div>
@@ -126,14 +126,14 @@
                     <div class="note" ng-if="item.note != ''">{{item.note}}</div>
                 </div>
             </div>
-            <!--Begin Time Block 8 - Session 3-->
+            <!--Begin Time Block - Session 3-->
 
-            <!--Begin Time Block 9 - Farewell-->
+            <!--Begin Time Block - Farewell-->
             <div class="small-block-grid=1 large-block-grid=2">
                 <div class="table-row-hr">
                     <div class="title">Farewell Message</div>
                     <div class="room">Room</div>
-                    <div class="note">03:30 PM - 04:00 PM</div>
+                    <div class="note">04:00 PM - 04:30 PM</div>
                 </div>
                 <div class="table-row">
                     <div class="title">Farewell Message</div>
@@ -141,7 +141,7 @@
                     <div class="note">Note: Amphitheater is located just outside the south doors.</div>
                 </div>
             </div>
-            <!--End Time Block 9 - Farewell-->
+            <!--End Time Block - Farewell-->
         </div>
     </div>
 </div>
