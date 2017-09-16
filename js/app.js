@@ -56,6 +56,11 @@ app.config([
         url:
           "https://utahpridecenter.secure.force.com/events/CnP_PaaS_EVT__ExternalRegistrationPage?event_id=a2G0a000000pgD5EAI",
         external: true
+      })
+      .state("donateLink", {
+        url:
+          "https://connect.clickandpledge.com/w/Form/2380d8b3-e10f-41c3-8d8b-6ab563e86fcc",
+        external: true
       });
   }
 ]);
